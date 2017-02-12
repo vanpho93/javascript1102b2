@@ -11,14 +11,17 @@ class TamGiac {
     this.b = b;
     this.c = c;
   }
-  tinhChieuDai(diemA, diemB){
-    let canh1 = diemA.x - diemB.x;
-    let canh2 = diemA.y - diemB.y;
-    let canhHuyen = Math.sqrt (canh1 * canh1 + canh2 * canh2)
-    return canhHuyen;
-  }
+
   tinhChuVi(){
-    return this.tinhChieuDai(this.a, this.b) + this.tinhChieuDai(this.a, this.c) + this.tinhChieuDai(this.b, this.c)
+    function tinhChieuDai(diemA, diemB){
+      let canh1 = diemA.x - diemB.x;
+      let canh2 = diemA.y - diemB.y;
+      let canhHuyen = Math.sqrt (canh1 * canh1 + canh2 * canh2)
+      return canhHuyen;
+    }
+    
+    return tinhChieuDai(this.a, this.b) + tinhChieuDai(this.a, this.c) + tinhChieuDai(this.b, this.c)
+
   }
 }
 let dA = new Diem(0, 0);
