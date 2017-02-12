@@ -8,6 +8,10 @@ function Person(ten, tuoi, soDu) {
   this.setSoDu = function(soDuMoi){
     soDuTaiKhoan = soDuMoi
   }
+
+  function abc(){
+    
+  }
 }
 
 let ps = new Person ('Huong', 18, 1000);
