@@ -31,12 +31,25 @@ function DoanThang(x1, y1, x2, y2){
   this.y1 = y1;
   this.y2 = y2;
   this.tinhChieuDai = function(){
-    let canh1 = x1 - x2;
-    let canh2 = y1 - y2;
+    let canh1 = this.x1 - this.x2;
+    let canh2 = this.y1 - this.y2;
     let canhHuyen = Math.sqrt (canh1 * canh1 + canh2 * canh2)
     return canhHuyen;
   }
 }
 
-var doanThanh1 = new DoanThang(0, 0, 0, 1);
-console.log(doanThanh1.tinhChieuDai());
+// var doanThanh1 = new DoanThang(0, 0, 0, 1);
+// console.log(doanThanh1.tinhChieuDai());
+
+function Person(name, age){
+  this.name = name;
+  this.age = age;
+  this.addAge = function(){
+    this.age++;
+  }
+}
+
+let khoa = new Person('Khoa', 30);
+console.log(khoa);
+khoa.addAge();
+console.log(khoa);
