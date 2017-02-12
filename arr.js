@@ -13,6 +13,8 @@ let arr = [3, 4, 1, 5, 3];
 // for(let i = 0; i < arr.length; i++){
 //   console.log(arr[i]);
 // }
-arr.forEach(function(element, index){
-  console.log('Xin chao: ' + element + ':' + index);
-});
+// arr.forEach((element, index) =>
+//   console.log('Xin chao: ' + element + ':' + index));
+
+console.log(arr);
+console.log(arr.join('::'));
